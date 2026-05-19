@@ -182,10 +182,11 @@ tor-rtcompat = { version = "0.42", optional = true, default-features = false, fe
 
 
 # tuic
-tuic-core= { branch = "build/tuic", optional = true, git = "https://github.com/Itsusinn/tuic.git", features = ["async_marshal", "marshal", "model"] }
+tuic-core= { tag = "v1.8.2", optional = true, git = "https://github.com/Itsusinn/tuic.git", features = ["async_marshal", "marshal", "model", "ring"] }
 register-count = { version = "0.1", optional = true }
 
 quinn = { version = "0.11", default-features = false, features = ["futures-io", "runtime-tokio"] }
+tuic-quinn = { package = "quinn", git = "https://github.com/Tipuch/quinn.git", branch = "bbrv3", default-features = false, features = ["futures-io", "runtime-tokio", "rustls-ring"] }
 
 # hysteria2
 h3 = "0.0.8"

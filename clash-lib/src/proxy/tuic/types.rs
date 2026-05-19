@@ -13,10 +13,8 @@ use std::{
 };
 use tokio::sync::RwLock as AsyncRwLock;
 use tracing::debug;
-use tuic_core::quinn::{
-    Connection as InnerConnection, Endpoint as QuinnEndpoint, QuinnConnection,
-    ZeroRttAccepted,
-};
+use tuic_quinn::{Connection as QuinnConnection, Endpoint as QuinnEndpoint, ZeroRttAccepted};
+use tuic_core::quinn::Connection as InnerConnection;
 use uuid::Uuid;
 
 pub struct TuicEndpoint {

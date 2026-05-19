@@ -11,7 +11,7 @@ use anyhow::Result;
 use async_trait::async_trait;
 
 use tracing::debug;
-use tuic_core::quinn::{
+use tuic_quinn::{
     ClientConfig as QuinnConfig, Endpoint as QuinnEndpoint, EndpointConfig,
     TokioRuntime, TransportConfig as QuinnTransportConfig, VarInt,
     congestion::{Bbr3Config, CubicConfig, NewRenoConfig},
